@@ -11,3 +11,7 @@
   --fundo: #ffffff;
   --fundo-detalhes: #ececec;
 }
+
+.conteudoPrincipal {
+  flex-grow: 3;
+}
