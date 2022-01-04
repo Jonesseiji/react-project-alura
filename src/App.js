@@ -5,6 +5,7 @@ import "./assets/index.css";
 import { Component } from "react";
 import FormularioDeCadastro from "./components/FormularioDeCadastro";
 import ListaDeNotas from "./components/ListaDeNotas";
+import ListaDeCategorias from "./components/ListadeCategorias";
 //#endregion
 
 class App extends Component {
@@ -41,10 +42,13 @@ class App extends Component {
     return (
       <div className="App">
         <FormularioDeCadastro criarNota={this.criarNota.bind(this)} />
-        <ListaDeNotas
-          apagarNota={this.deletarNota.bind(this)}
-          notas={this.state.notas}
-        />
+        <main className="conteudoPrincipal">
+          <ListaDeCategorias />
+          <ListaDeNotas
+            apagarNota={this.deletarNota.bind(this)}
+            notas={this.state.notas}
+          />
+        </main>
       </div>
     );
   }
