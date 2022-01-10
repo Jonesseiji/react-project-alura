@@ -16,6 +16,7 @@ class CardNota extends Component {
         <header className="cardNota_cabecalho">
           <h3 className="cardNota_titulo">{this.props.titulo}</h3>
           <DeleteSVG onClick={this.apagar.bind(this)} />
+          <h4>{this.props.categoria}</h4>
         </header>
         <p className="cardNota_texto">{this.props.texto} </p>
       </section>
